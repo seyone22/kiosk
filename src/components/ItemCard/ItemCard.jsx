@@ -1,9 +1,10 @@
 import styles from "./ItemCard.module.css";
+import Image from "next/image";
 
 const ItemCard = ({ artistHandle, itemDetails }) => {
     return (
         <div className={styles.card}>
-            <img src={`artist/${artistHandle}/merch/${itemDetails.itemCode}.png`} alt="" className={styles.cardImage}/>
+            <Image src={`/artist/${artistHandle}/merch/${itemDetails.itemCode}.png`} width="200" height="200" alt="" className={styles.cardImage}/>
             <div className={styles.cardDescription}>
                 <h5> {itemDetails.name} </h5>
                 <div className={styles.price}>

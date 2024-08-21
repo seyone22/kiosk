@@ -1,0 +1,50 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLogo {
+    margin-bottom: 10px;
+}
+
+.footerText {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footerLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+    color: #fcb506;
+}
+
+.footerContact {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.divider {
+    width: 2px;
+    background-color: #FFFFFF;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}

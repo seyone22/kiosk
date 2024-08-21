@@ -4,24 +4,24 @@ import { FaInstagram, FaEnvelope, FaDiscord } from 'react-icons/fa';
 const SocialMediaRow = ({ instagram, pixiv, email, discord }) => {
     return (
         <div className={styles.socialMediaRow}>
+            {email && (
+                <a className={styles.smIcon} href={`mailto:${email}`} aria-label="Email">
+                    <FaEnvelope/>
+                </a>
+            )}
             {instagram && (
-                <a href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <FaInstagram className={styles.icon} />
+                <a className={styles.smIcon} href={instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <FaInstagram/>
                 </a>
             )}
             {pixiv && (
-                <a href={pixiv} target="_blank" rel="noopener noreferrer" aria-label="Pixiv">
-                    <FaEnvelope className={styles.icon} />
-                </a>
-            )}
-            {email && (
-                <a href={`mailto:${email}`} aria-label="Email">
-                    <FaEnvelope className={styles.icon} />
+                <a className={styles.smIcon} href={pixiv} target="_blank" rel="noopener noreferrer" aria-label="Pixiv">
+                    <FaEnvelope/>
                 </a>
             )}
             {discord && (
-                <a href={`discord.gg/${discord}`} aria-label="Discord">
-                    <FaDiscord className={styles.icon}/>
+                <a className={styles.smIcon} href={`discord.gg/${discord}`} aria-label="Discord">
+                    <FaDiscord/>
                 </a>
             )}
         </div>

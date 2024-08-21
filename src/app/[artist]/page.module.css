@@ -1,13 +1,30 @@
+/* Base Container */
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
+/* Cover Image */
 .coverImage {
-    width: 100%;
-    height: 20vh;
+    width: 100vw;
+    height: 24vh;
     object-fit: cover;
     object-position: center;
+}
+
+/* Content */
+.content {
+    width: 60vw;
+}
+
+/* Profile Section */
+.profileArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-60px);
 }
 
 .profileIcon {
@@ -19,36 +36,102 @@
     object-position: center;
 }
 
-.profileArea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-60px);
+/* Text Styling */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .subTitle {
     font-style: italic;
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 .descriptionBody {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 100%;
     align-self: center;
     text-align: justify;
+    margin-bottom: 24px;
 }
 
+/* Split Layout */
 .split {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .column {
-    width: 50%;
+    width: 48%;
     margin-top: 24px;
 }
 
 .column:first-of-type {
-    margin-right: 36px;
+    margin-right: 36px; /* Optional based on your design needs */
+}
+
+/* Merchandise List */
+.merchandiseList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .coverImage {
+        height: 20vh;
+    }
+
+    .profileIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .split {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .coverImage {
+        height: 18vh;
+    }
+
+    .profileIcon {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Content */
+    .content {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .coverImage {
+        height: 16vh;
+    }
+
+    .profileIcon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Content */
+    .content {
+        width: 95vw;
+    }
 }
