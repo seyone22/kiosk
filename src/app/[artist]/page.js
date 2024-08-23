@@ -14,6 +14,7 @@ export default async function ArtistPage({params}) {
 
     return (
         <main>
+            <Image className={styles.backgroundImage} width="1920" height="1080" src="/background.png"/>
             <BackButton />
             <div className={styles.container}>
                 <div className={styles.coverBanner}>

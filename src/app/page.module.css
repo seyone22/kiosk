@@ -145,7 +145,7 @@
   .vercelLogo {
     filter: invert(1);
   }
-
+f
   .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
@@ -161,7 +161,7 @@
 }
 
 .backgroundImage {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: -1;
   max-height: 100vh;

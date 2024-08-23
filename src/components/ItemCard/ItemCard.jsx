@@ -8,7 +8,7 @@ const ItemCard = ({ artistHandle, itemDetails }) => {
             <div className={styles.cardDescription}>
                 <h5> {itemDetails.name} </h5>
                 <div className={styles.price}>
-                    {itemDetails.price}
+                    Rs.{itemDetails.price}
                 </div>
 
                 <span className={styles.chip}>
