@@ -12,7 +12,6 @@ export default async function Home() {
             <div className={styles.container}>
                 <Image className={styles.mainLogo} width="500" height="216" src="/animelk.png"/>
 
-                <h2 className={styles.heading}> Our Artists </h2>
                 <div className={styles.artistGrid}>
                     {artistData.map(artist => (<ArtistCard key={artist._id} artist={artist}/>))}
                 </div>
