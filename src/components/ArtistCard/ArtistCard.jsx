@@ -8,7 +8,7 @@ const ArtistCard = ({artist}) => {
                 <Image src={`/artist/${artist.handle}/icon.png`} width="200" height="200" alt=""
                        className={styles.cardImage}/>
                 <div className={styles.cardDescription}>
-                    <h5> {artist.handle} </h5>
+                    <h5>{artist.handle.length > 15 ? `${artist.handle.slice(0, 15)}...` : artist.handle}</h5>
                 </div>
             </div>
         </a>
