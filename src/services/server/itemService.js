@@ -22,7 +22,7 @@ export const getItemsByArtist = async (artistCode) => {
         await dbConnect();
 
         // Use regex to match the first 4 characters of itemCode with artistCode
-        const items = await Item.find({ itemCode: { $regex: `^${artistCode}` } }).exec();
+        const items = await Item.find({ itemCode: { $regex: artistCode, $options: 'i' } }).exec();
 
         if (!items || items.length === 0) {
             return {};
