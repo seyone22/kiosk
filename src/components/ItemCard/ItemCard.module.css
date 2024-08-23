@@ -21,11 +21,6 @@
     font-weight: bold;
 }
 
-.chip:hover {
-    background-color: gray;
-    cursor: pointer;
-}
-
 .chip {
     background-color: lightgreen;
     width: auto;
@@ -35,5 +30,9 @@
     border-radius: 12px;
     font-weight: bold;
     font-size: 12px;
+}
+
+.chipRow {
+    margin-top: 12px;
 }
 
