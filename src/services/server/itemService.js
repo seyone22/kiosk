@@ -17,13 +17,15 @@ export const getItemById = async (itemId) => {
 };
 
 // Function to get items by artist ID
-export const getItemsByArtist = async (artistId) => {
+export const getItemsByArtist = async (artistCode) => {
     try {
         await dbConnect();
 
-        const items = await Item.find({ artistId: artistId }).exec();
+        // Use regex to match the first 4 characters of itemCode with artistCode
+        const items = await Item.find({ itemCode: { $regex: `^${artistCode}` } }).exec();
+
         if (!items || items.length === 0) {
-            return { };
+            return {};
         }
         return items;
     } catch (error) {

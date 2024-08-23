@@ -4,15 +4,17 @@ import {getItemsByArtist} from "@/services/server/itemService";
 import ItemCard from "@/components/ItemCard/ItemCard";
 import SocialMediaRow from "@/components/SocialMediaRow/SocialMediaRow";
 import Image from "next/image";
+import BackButton from "@/components/BackButton/BackButton";
 
 export default async function ArtistPage({params}) {
     const handle = params.artist;
     const artistData = await getArtistByHandle(handle)
 
-    const artistMerchandise = await getItemsByArtist(artistData._id)
+    const artistMerchandise = await getItemsByArtist(artistData.artistCode)
 
     return (
         <main>
+            <BackButton />
             <div className={styles.container}>
                 <div className={styles.coverBanner}>
                     <Image src={`/artist/${handle}/cover.png`} alt="Cover Image" width="1080" height="24" className={styles.coverImage}/>
@@ -40,13 +42,12 @@ export default async function ArtistPage({params}) {
                         </div>
                     </div>
 
-
+                    <h2> Merchandise </h2>
                     <div className={styles.merchandiseList}>
-                        <h2> Merchandise </h2>
                         {
                             artistMerchandise.length > 0 &&
                             artistMerchandise.map(merch => (
-                                <ItemCard artistHandle={handle} itemDetails={merch} key={merch._id} />
+                                <ItemCard artistHandle={handle} itemDetails={merch} key={merch._id}/>
                             ))
                         }
                     </div>

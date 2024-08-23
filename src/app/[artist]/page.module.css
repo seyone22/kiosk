@@ -78,7 +78,8 @@
 /* Merchandise List */
 .merchandiseList {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 24px;
     width: 100%;
 }
@@ -133,5 +134,10 @@
     /* Content */
     .content {
         width: 95vw;
+    }
+
+    .merchandiseList {
+        width: 100%;
+        justify-content: center;
     }
 }
