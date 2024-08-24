@@ -171,6 +171,8 @@ f
 
 .mainLogo {
   margin-bottom: 32px;
+  width: 360px;
+  height: auto;
 }
 
 .heading {
